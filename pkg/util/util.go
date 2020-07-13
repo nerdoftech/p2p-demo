@@ -17,7 +17,8 @@ import (
 // Tag logs with package name
 var log = zlog.With().Str("pkg", "util").Logger()
 
-// Is a wrapped LocalNode so we can get access to the key for later use, key is unexported in enode.LocalNode
+// LNodeWrapper is a wrapped LocalNode so we can get access
+// to the key for later use, key is unexported in enode.LocalNode
 type LNodeWrapper struct {
 	Key       *ecdsa.PrivateKey
 	DB        *enode.DB
@@ -53,6 +54,7 @@ func (l *LNodeWrapper) createDB(path string) error {
 	return nil
 }
 
+// GenerateNodeKey for node keys
 func GenerateNodeKey() (*ecdsa.PrivateKey, error) {
 	log.Debug().Msg("generating node key")
 	key, err := crypto.GenerateKey()

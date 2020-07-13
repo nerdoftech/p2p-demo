@@ -37,17 +37,20 @@ func main() {
 
 	flag.Parse()
 
+	// Set the log level
 	lvl, err := zerolog.ParseLevel(*flgLogLvl)
 	if err != nil {
 		log.Fatal().Err(err).Msg("could not parse log level")
 	}
 	zerolog.SetGlobalLevel(lvl)
 
+	// Make the addr:port string
 	if *flgRandomPort {
 		*flgPort = util.GenerateRandomPort()
 	}
 	addr := fmt.Sprintf("%s:%d", *flgAddr, *flgPort)
 
+	// Create a new p2p server
 	if *flgName == "" {
 		*flgName = fmt.Sprintf("node-%d", *flgPort)
 	}
@@ -56,6 +59,7 @@ func main() {
 		log.Fatal().Err(err).Msg("failed to create new server")
 	}
 
+	// prepare the sub
 	eventChan := make(chan *p2p.PeerEvent, 10)
 	go printEvents(eventChan)
 	s.SubscribeEvents(eventChan)

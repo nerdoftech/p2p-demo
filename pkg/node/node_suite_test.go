@@ -34,14 +34,14 @@ var _ = Describe("node", func() {
 			_, err := NewP2PServer("", bn, "1234", "")
 			Expect(err).Should(HaveOccurred())
 		})
-		It("fail because bad bootnode", func() {
+		It("fail because bad bootnode url", func() {
 			_, err := NewP2PServer("", "1234", "", "")
 			Expect(err).Should(HaveOccurred())
 		})
 	})
 	Context("p2pHandler", func() {
 		hdlr := &p2pHandler{zlog.With().Str("pkg", "unit_test").Logger()}
-		// We wont test LvlCrit as it exits
+		// We wont test LvlCrit as it makes test fail
 		DescribeTable("should work",
 			func(rec *elog.Record) {
 				hdlr.Log(rec)

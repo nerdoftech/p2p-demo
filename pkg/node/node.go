@@ -21,14 +21,16 @@ var log = zlog.With().Str("pkg", "node").Logger().Output(zerolog.ConsoleWriter{O
 
 // NewP2PServer returns a configured p2p node
 func NewP2PServer(name string, bootnode string, rstNets string, addr string) (*p2p.Server, error) {
+	// Set allowed networks
 	nl, err := netutil.ParseNetlist(rstNets)
 	if err != nil {
 		msg := "failed to parse netlist"
 		log.Error().Err(err).Msg(msg)
 		return nil, errors.New(msg)
 	}
-	log.Debug().Interface("allowed nets", nl).Msg("setting allowed nets")
+	log.Debug().Interface("allowed nets", nl).Msg("parsed allowed nets")
 
+	// Parse the boot node
 	bn, err := enode.Parse(enode.ValidSchemes, bootnode)
 	if err != nil {
 		msg := "could not parse boot node"
@@ -43,12 +45,12 @@ func NewP2PServer(name string, bootnode string, rstNets string, addr string) (*p
 		return nil, err
 	}
 
-	// P2P server logs to logrus
-	p2pLog := elog.Root()
+	// Use zerolog for p2p server
 	handler := &p2pHandler{
 		// tag p2p server logs
 		logger: zlog.With().Str("pkg", "p2p-server").Str("node_name", name).Logger(),
 	}
+	p2pLog := elog.Root()
 	p2pLog.SetHandler(handler)
 
 	s := &p2p.Server{

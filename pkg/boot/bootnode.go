@@ -30,7 +30,9 @@ func StartBootNode(ln *enode.LocalNode, cfg *discover.Config, ip string, port in
 		return nil, nil, errors.New(errMsg)
 	}
 
+	// Needed to get node URL
 	ipAddr := conn.LocalAddr().(*net.UDPAddr).IP
 	node := enode.NewV4(&cfg.PrivateKey.PublicKey, ipAddr, 0, port)
+
 	return dUDP, node, nil
 }

@@ -36,17 +36,20 @@ func main() {
 
 	flag.Parse()
 
+	// Set log level
 	lvl, err := zerolog.ParseLevel(*flgLogLvl)
 	if err != nil {
 		log.Fatal().Err(err).Msg("could not parse log level")
 	}
 	zerolog.SetGlobalLevel(lvl)
 
+	// Create new local node
 	nw, err := util.NewLNodeWrapper("")
 	if err != nil {
 		log.Fatal().Err(err).Msg("could not create local node")
 	}
 
+	// Set allowed networks
 	list, err := netutil.ParseNetlist(*flgNetlist)
 	if err != nil {
 		log.Fatal().Err(err).Msg("could not parse netlist")
@@ -56,6 +59,7 @@ func main() {
 		NetRestrict: list,
 	}
 
+	// Start the boot node
 	if *flgRandomPort {
 		*flgPort = util.GenerateRandomPort()
 	}
