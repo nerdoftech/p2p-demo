@@ -4,10 +4,18 @@ import (
 	"testing"
 
 	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
+	"github.com/rs/zerolog"
+	zlog "github.com/rs/zerolog/log"
+
+	elog "github.com/ethereum/go-ethereum/log"
 )
 
 func TestNode(t *testing.T) {
+	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+	zerolog.SetGlobalLevel(zerolog.DebugLevel)
+
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Node Suite")
 }
@@ -30,5 +38,17 @@ var _ = Describe("node", func() {
 			_, err := NewP2PServer("", "1234", "", "")
 			Expect(err).Should(HaveOccurred())
 		})
+	})
+	Context("p2pHandler", func() {
+		hdlr := &p2pHandler{zlog.With().Str("pkg", "unit_test").Logger()}
+		// We wont test LvlCrit as it exits
+		DescribeTable("should work",
+			func(rec *elog.Record) {
+				hdlr.Log(rec)
+			},
+			Entry("test debug", &elog.Record{Lvl: elog.LvlDebug}),
+			Entry("test debug", &elog.Record{Lvl: elog.LvlInfo}),
+			Entry("test debug", &elog.Record{Lvl: elog.LvlWarn}),
+		)
 	})
 })

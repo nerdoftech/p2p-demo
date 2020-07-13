@@ -3,19 +3,19 @@ package boot
 import (
 	"testing"
 
+	"github.com/ethereum/go-ethereum/p2p/discover"
 	"github.com/ethereum/go-ethereum/p2p/enode"
 
-	"github.com/ethereum/go-ethereum/p2p/discover"
-
 	"github.com/nerdoftech/p2p-demo/pkg/util"
+	"github.com/rs/zerolog"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	log "github.com/sirupsen/logrus"
 )
 
 func TestBoot(t *testing.T) {
-	log.SetLevel(log.DebugLevel)
+	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+	zerolog.SetGlobalLevel(zerolog.DebugLevel)
 
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Boot Suite")

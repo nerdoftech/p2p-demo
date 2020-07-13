@@ -7,12 +7,12 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
-
-	log "github.com/sirupsen/logrus"
+	"github.com/rs/zerolog"
 )
 
 func TestUtil(t *testing.T) {
-	log.SetLevel(log.DebugLevel)
+	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+	zerolog.SetGlobalLevel(zerolog.DebugLevel)
 
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Util Suite")

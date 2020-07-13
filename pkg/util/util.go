@@ -11,57 +11,57 @@ import (
 
 	"github.com/ethereum/go-ethereum/crypto"
 
-	log "github.com/sirupsen/logrus"
+	zlog "github.com/rs/zerolog/log"
 )
 
+// Tag logs with package name
+var log = zlog.With().Str("pkg", "util").Logger()
+
+// Is a wrapped LocalNode so we can get access to the key for later use, key is unexported in enode.LocalNode
 type LNodeWrapper struct {
 	Key       *ecdsa.PrivateKey
 	DB        *enode.DB
 	LocalNode *enode.LocalNode
 }
 
+// NewLNodeWrapper creates a wrapped LocalNode
 func NewLNodeWrapper(path string) (*LNodeWrapper, error) {
-	ln := &LNodeWrapper{}
-	err := ln.generateNodeKey()
+	nw := &LNodeWrapper{}
+	var err error
+	nw.Key, err = GenerateNodeKey()
 	if err != nil {
 		return nil, err
 	}
-	err = ln.createDB(path)
+	err = nw.createDB(path)
 	if err != nil {
 		return nil, err
 	}
-	ln.LocalNode = enode.NewLocalNode(ln.DB, ln.Key)
-	return ln, nil
+	nw.LocalNode = enode.NewLocalNode(nw.DB, nw.Key)
+	return nw, nil
 }
 
 // Creates a node db, file can be blank
 func (l *LNodeWrapper) createDB(path string) error {
-	log.Debug("opening DB")
+	log.Debug().Msg("opening DB")
 	db, err := enode.OpenDB(path)
 	if err != nil {
 		msg := "failed to open DB"
-		log.WithError(err).Error(msg)
+		log.Error().Err(err).Msg(msg)
 		return errors.New(msg)
 	}
 	l.DB = db
 	return nil
 }
 
-func (l *LNodeWrapper) generateNodeKey() error {
-	var err error
-	l.Key, err = GenerateNodeKey()
-	return err
-}
-
 func GenerateNodeKey() (*ecdsa.PrivateKey, error) {
-	log.Debug("generating node key")
+	log.Debug().Msg("generating node key")
 	key, err := crypto.GenerateKey()
 	if err != nil {
 		msg := "Failed to generate key"
-		log.WithError(err).Error(msg)
+		log.Error().Err(err).Msg(msg)
 		return nil, errors.New(msg)
 	}
-	log.Debug("key generated")
+	log.Debug().Msg("key generated")
 	return key, nil
 }
 
@@ -78,7 +78,7 @@ func GenerateRandomPort() int {
 func NewUDPConn(ipStr string, port int) (*net.UDPConn, error) {
 	ip := net.ParseIP(ipStr)
 	if ip == nil {
-		log.WithField("IP", ipStr).Error("Could not parse IP string")
+		log.Error().Str("IP", ipStr).Msg("Could not parse IP string")
 		return nil, errors.New("bad IP string")
 	}
 	addr := &net.UDPAddr{
@@ -89,9 +89,9 @@ func NewUDPConn(ipStr string, port int) (*net.UDPConn, error) {
 	conn, err := net.ListenUDP("udp", addr)
 	if err != nil {
 		msg := "can't start UDP listener"
-		log.WithError(err).Error(msg)
+		log.Error().Err(err).Msg(msg)
 		return nil, errors.New(msg)
 	}
-	log.WithField("IP", addr.IP).WithField("Port", addr.Port).Debug("starting UDP listener")
+	log.Debug().Interface("IP", addr.IP).Int("Port", addr.Port).Msg("starting UDP listener")
 	return conn, nil
 }
