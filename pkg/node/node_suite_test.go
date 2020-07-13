@@ -46,6 +46,7 @@ var _ = Describe("node", func() {
 			func(rec *elog.Record) {
 				hdlr.Log(rec)
 			},
+			Entry("test debug", &elog.Record{Lvl: elog.LvlTrace}),
 			Entry("test debug", &elog.Record{Lvl: elog.LvlDebug}),
 			Entry("test debug", &elog.Record{Lvl: elog.LvlInfo}),
 			Entry("test debug", &elog.Record{Lvl: elog.LvlWarn}),

@@ -2,6 +2,7 @@ package node
 
 import (
 	"errors"
+	"os"
 
 	"github.com/rs/zerolog"
 
@@ -16,7 +17,7 @@ import (
 )
 
 // Tag logs with package name
-var log = zlog.With().Str("pkg", "node").Logger()
+var log = zlog.With().Str("pkg", "node").Logger().Output(zerolog.ConsoleWriter{Out: os.Stderr})
 
 // NewP2PServer returns a configured p2p node
 func NewP2PServer(name string, bootnode string, rstNets string, addr string) (*p2p.Server, error) {
@@ -34,6 +35,7 @@ func NewP2PServer(name string, bootnode string, rstNets string, addr string) (*p
 		log.Error().Err(err).Msg(msg)
 		return nil, errors.New(msg)
 	}
+	log.Debug().Interface("ID", bn.ID()).Str("url", bn.String()).Msg("Parsed boot node")
 
 	key, err := util.GenerateNodeKey()
 	if err != nil {

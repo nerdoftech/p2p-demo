@@ -1,0 +1,351 @@
+go test -v test/p2p_suite_test.go 
+=== RUN   TestTest
+Running Suite: P2P Suite
+========================
+Random Seed: 1594613787
+Will run 1 of 1 specs
+
+{"level":"debug","pkg":"util","time":1594613787,"message":"generating node key"}
+{"level":"debug","pkg":"util","time":1594613787,"message":"key generated"}
+{"level":"debug","pkg":"util","time":1594613787,"message":"opening DB"}
+{"level":"debug","pkg":"bootnode","time":1594613787,"message":"starting UDP server"}
+{"level":"debug","pkg":"util","IP":"127.0.0.1","Port":37222,"time":1594613787,"message":"starting UDP listener"}
+{"level":"debug","pkg":"bootnode","time":1594613787,"message":"starting p2p discovery server"}
+4:16AM INF allowing bootnode to start pkg=test url=enode://02538dad585f3bd984b3bf8d434e8772fcd0e33345e5184a2e6559d1eb1a002f86c3b89776280e07704babf911dd966594e1b52db03496f95aeffcbdb08ca7aa@127.0.0.1:0?discport=37222
+4:16AM DBG setting allowed nets allowed nets=[{"IP":"127.0.0.0","Mask":"/wAAAA=="}] pkg=node
+4:16AM DBG Parsed boot node ID=881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7 pkg=node url=enode://02538dad585f3bd984b3bf8d434e8772fcd0e33345e5184a2e6559d1eb1a002f86c3b89776280e07704babf911dd966594e1b52db03496f95aeffcbdb08ca7aa@127.0.0.1:0?discport=37222
+{"level":"debug","pkg":"util","time":1594613797,"message":"generating node key"}
+{"level":"debug","pkg":"util","time":1594613797,"message":"key generated"}
+4:16AM DBG TCP listener up ctx=["addr",{"IP":"127.0.0.1","Port":44720,"Zone":""}] node_name=node1 pkg=p2p-server
+4:16AM DBG UDP listener up ctx=["addr",{"IP":"127.0.0.1","Port":44720,"Zone":""}] node_name=node1 pkg=p2p-server
+4:16AM TRC Found seed node in database ctx="marshaling error: json: unsupported type: func() interface {}" node_name=node1 pkg=p2p-server
+4:16AM INF New local node record ctx=["seq",1,"id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","udp",44720,"tcp",44720] node_name=node1 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node1 pkg=p2p-server
+4:16AM INF Started P2P networking ctx=["self","enode://4450a43fcc68192336f114544ab5926587fa92c513dcca6192580f5d189242892b7f4df5fa819139b0221c3d2528e164b2c5924755d86725bec641e38a3f770c@127.0.0.1:44720"] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC Found seed node in database ctx="marshaling error: json: unsupported type: func() interface {}" node_name=node1 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",1,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",1,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",2,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",2,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",3,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",3,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",4,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",4,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node1 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",5,"results",0,"err",{}] node_name=node1 pkg=p2p-server
+4:16AM TRC Too many findnode failures, dropping ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",5] node_name=node1 pkg=p2p-server
+4:16AM DBG setting allowed nets allowed nets=[{"IP":"127.0.0.0","Mask":"/wAAAA=="}] pkg=node
+4:16AM DBG Parsed boot node ID=881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7 pkg=node url=enode://02538dad585f3bd984b3bf8d434e8772fcd0e33345e5184a2e6559d1eb1a002f86c3b89776280e07704babf911dd966594e1b52db03496f95aeffcbdb08ca7aa@127.0.0.1:0?discport=37222
+{"level":"debug","pkg":"util","time":1594613802,"message":"generating node key"}
+{"level":"debug","pkg":"util","time":1594613802,"message":"key generated"}
+4:16AM DBG UDP listener up ctx=["addr",{"IP":"127.0.0.1","Port":60675,"Zone":""}] node_name=node2 pkg=p2p-server
+4:16AM DBG TCP listener up ctx=["addr",{"IP":"127.0.0.1","Port":60675,"Zone":""}] node_name=node2 pkg=p2p-server
+4:16AM TRC Found seed node in database ctx="marshaling error: json: unsupported type: func() interface {}" node_name=node2 pkg=p2p-server
+4:16AM INF New local node record ctx=["seq",1,"id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","ip","127.0.0.1","udp",60675,"tcp",60675] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Found seed node in database ctx="marshaling error: json: unsupported type: func() interface {}" node_name=node2 pkg=p2p-server
+4:16AM INF Started P2P networking ctx=["self","enode://87423f21806bc8f47b0894ca6bfbca19021431b961cfe42e29aa693e150eb59fdce6be5bda6f834f70d7360f0516a649ee1d24a6ed7bc81d42e16935076975e6@127.0.0.1:60675"] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",1,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",1,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",2,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",2,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",3,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",3,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",4,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",4,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Findnode failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",5,"results",0,"err",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Too many findnode failures, dropping ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","failcount",5] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> ENRREQUEST/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << ENRREQUEST/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> ENRRESPONSE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << ENRRESPONSE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM DBG Revalidated node ctx=["b",15,"id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","checks",1] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM INF Looking for peers ctx=["peercount",0,"tried",0,"static",0] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> ENRREQUEST/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << ENRREQUEST/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> ENRRESPONSE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << ENRRESPONSE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM DBG Revalidated node ctx=["b",15,"id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","checks",1] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM INF Looking for peers ctx=["peercount",0,"tried",0,"static",0] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> NEIGHBORS/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << NEIGHBORS/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Starting p2p dial ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","flag",1] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Accepted connection ctx=["addr",{"IP":"127.0.0.1","Port":44380,"Zone":""}] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Discarding dial candidate ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","ip","127.0.0.1","reason",{}] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Starting p2p dial ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","ip","127.0.0.1","flag",1] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC Accepted connection ctx=["addr",{"IP":"127.0.0.1","Port":52264,"Zone":""}] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM DBG Adding p2p peer ctx=["peercount",1,"id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","conn",4,"addr",{"IP":"127.0.0.1","Port":44380,"Zone":""},"name","node2"] node_name=node2 pkg=p2p-server
+4:16AM DBG Adding p2p peer ctx=["peercount",1,"id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","conn",1,"addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"name","node1"] node_name=node2 pkg=p2p-server
+4:16AM TRC Rejected peer ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":52264,"Zone":""},"conn",4,"err",5] node_name=node2 pkg=p2p-server
+4:16AM TRC Rejected peer ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"conn",1,"err",5] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PING/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PING/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> PONG/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << PONG/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> ENRREQUEST/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << ENRREQUEST/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> ENRRESPONSE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC << ENRRESPONSE/v4 ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM DBG ENR request failed ctx=["id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","addr",{"IP":"127.0.0.1","Port":37222,"Zone":""},"err",{}] node_name=node2 pkg=p2p-server
+4:16AM DBG Revalidated node ctx=["b",15,"id","881c5d8ad0c18bfcc3865e598fda650c1a6bc4b99bb998e5ed1cbfd9e783c8b7","checks",1] node_name=node2 pkg=p2p-server
+4:16AM TRC P2P networking is spinning down ctx=[] node_name=node2 pkg=p2p-server
+4:16AM DBG Read error ctx=["err",{"Addr":{"IP":"127.0.0.1","Port":44720,"Zone":""},"Err":{},"Net":"tcp","Op":"accept","Source":null}] node_name=node2 pkg=p2p-server
+4:16AM DBG UDP read error ctx=["err",{"Addr":null,"Err":{},"Net":"udp","Op":"read","Source":{"IP":"127.0.0.1","Port":44720,"Zone":""}}] node_name=node2 pkg=p2p-server
+4:16AM TRC <-delpeer (spindown) ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","conn",4] node_name=node2 pkg=p2p-server
+4:16AM DBG Removing p2p peer ctx=["peercount",0,"id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","duration",481970495,"req",true,"err",8] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","f3677c78471f922a3e843e32f23051eb31291f0dbd542d99b7fa951a7654bbf8","addr",{"IP":"127.0.0.1","Port":44720,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+4:16AM TRC >> FINDNODE/v4 ctx=["id","cae864429b37a3f9cde8100111269fe0b5c3e073284e7007816fee5ef01b5aca","addr",{"IP":"127.0.0.1","Port":60675,"Zone":""},"err",{"Addr":{"IP":"127.0.0.1","Port":60675,"Zone":""},"Err":{},"Net":"udp","Op":"write","Source":{"IP":"127.0.0.1","Port":44720,"Zone":""}}] node_name=node2 pkg=p2p-server
+4:16AM DBG Read error ctx=["err",{"Addr":{"IP":"127.0.0.1","Port":60675,"Zone":""},"Err":{},"Net":"tcp","Op":"accept","Source":null}] node_name=node2 pkg=p2p-server
+4:16AM TRC P2P networking is spinning down ctx=[] node_name=node2 pkg=p2p-server
+4:16AM DBG UDP read error ctx=["err",{"Addr":null,"Err":{},"Net":"udp","Op":"read","Source":{"IP":"127.0.0.1","Port":60675,"Zone":""}}] node_name=node2 pkg=p2p-server
+• [SLOW TEST:18.043 seconds]
+test p2p node interaction
+/home/eric/code/go/src/github.com/nerdoftech/p2p-demo/test/p2p_suite_test.go:40
+  run nodes
+  /home/eric/code/go/src/github.com/nerdoftech/p2p-demo/test/p2p_suite_test.go:68
+    should work
+    /home/eric/code/go/src/github.com/nerdoftech/p2p-demo/test/p2p_suite_test.go:70
+------------------------------
+4:16AM DBG UDP read error ctx=["err",{"Addr":null,"Err":{},"Net":"udp","Op":"read","Source":{"IP":"127.0.0.1","Port":37222,"Zone":""}}] node_name=node2 pkg=p2p-server
+
+Ran 1 of 1 Specs in 28.048 seconds
+SUCCESS! -- 1 Passed | 0 Failed | 0 Pending | 0 Skipped
+--- PASS: TestTest (28.05s)
+PASS
+ok  	command-line-arguments	28.096s

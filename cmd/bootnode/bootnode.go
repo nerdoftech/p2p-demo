@@ -64,8 +64,9 @@ func main() {
 		log.Fatal().Err(err).Msg("")
 	}
 
-	// Send the node URL to stdout
-	fmt.Println(node.URLv4())
+	// Send the node info to stdout
+	fmt.Println("ID:", node.ID())
+	fmt.Println("URL:", node.URLv4())
 
 	log.Debug().Msgf("server started, waiting for signal to shutdown")
 	ch := make(chan os.Signal, 1)
