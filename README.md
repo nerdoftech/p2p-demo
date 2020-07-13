@@ -135,7 +135,7 @@ We can see the node trying to bond (PING/PONG) with the boot node. This bonding 
 
 ```text
 11:31PM TRC >> PING/v4 ctx=["id","42e1758985f74310bb40e4bcf67cc6001c3ca774e23cad92afc19d89f9b7e641","addr",{"IP":"127.0.0.1","Port":30303,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
-11:31PM TRC >> PING/v4 ctx=["id","42e1758985f74310bb40e4bcf67cc6001c3ca774e23cad92afc19d89f9b7e641","addr",{"IP":"127.0.0.1","Port":30303,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
+11:31PM TRC << PONG/v4 ctx=["id","42e1758985f74310bb40e4bcf67cc6001c3ca774e23cad92afc19d89f9b7e641","addr",{"IP":"127.0.0.1","Port":30303,"Zone":""},"err",null] node_name=node2 pkg=p2p-server
 ```
 
 From what we can see of these next few log entries, it appears to log the id of the node it is sending to, not the payload of the packet. I am making this assumption because according to the spec, the first `FINDNODE` to the boot node is supposed to be for self, as in asking the boot node for neighbors close in distance (XOR of node IDs) to itself.
